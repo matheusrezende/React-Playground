@@ -1,0 +1,19 @@
+.event-list {
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+.event-list__loading-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+@media only screen and (max-width: 900px) {
+    .event-list {
+        margin: 30px 20px
+    }
+}

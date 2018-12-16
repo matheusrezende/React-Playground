@@ -1,0 +1,30 @@
+.detail-item {
+    width: calc(100% / 3);
+    overflow: hidden;
+    display: flex;
+}
+
+.detail-item svg {
+    height: 18px;
+    width: 18px;
+    fill: darkgray;
+}
+
+.detail-item span {
+    font-size: 11px;
+    
+}
+
+.detail-item___primary-text--bold {
+    font-weight: bold
+}
+
+
+.detail-item__icon-wrapper {
+    margin-left: 5px
+}
+
+.detail-item__text-wrapper {
+    line-height: 17px;
+    margin: 0 0 0 10px
+}

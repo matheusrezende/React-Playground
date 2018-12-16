@@ -1,28 +1,14 @@
-import React, {Component} from 'react';
-import 'bootstrap/dist/js/bootstrap.min'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React, {PureComponent} from 'react';
 
-class App extends Component {
+import EventList from './Components/EventList/EventList.container';
+import HeaderComponent from './Components/Header/Header.component';
+
+class App extends PureComponent {
   render() {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <p>
-            Edit
-            {' '}
-            <code>src/App.js</code>
-            {' '}
-and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <HeaderComponent />
+        <EventList />
       </div>
     );
   }
