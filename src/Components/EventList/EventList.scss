@@ -12,6 +12,18 @@
 
 }
 
+.event-list__pagination__button {
+    background-color: transparent;
+    color: #53d81e;
+    border: none
+
+}
+.event-list__pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px
+}
+
 @media only screen and (max-width: 900px) {
     .event-list {
         margin: 30px 20px
