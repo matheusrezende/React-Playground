@@ -1,20 +1,33 @@
 import React from 'react'
-import BeatLoader from 'react-spinners/BeatLoader';
-import _ from 'lodash'
+
 import EventItem from '../EventItem/EventItem.container';
 import './EventList.scss'
 
-export default ({events, loading}) => (
+
+export default ({events, page, changePage}) => (
   <div className='event-list'>
-    {
-      _.isEmpty(events) || loading
-        ? (
-          <div className='event-list__loading-wrapper'>
-            <BeatLoader />
-          </div>
+    {events.map((item, index) => (
+      <EventItem key={index} event={item} />
+    ))}
+    <div>
+      {
+        // dont show in case the user is in the first page
+        page > 1 && (
+          <button type='button' onClick={() => changePage(page - 1)}>
+            {'<< '}
+        Previous
+          </button>
+        )}
+      {
+        // the default page size is 10, so if theres less then ten items it means we are on the last page
+        events.length === 10 && (
+          <button type='button' onClick={() => changePage(page + 1)}>
+          Next
+            {' >>'}
+          </button>
         )
-        : events.map((item, index) => <EventItem key={index} event={item} />)
-    }
-    
+      }
+      
+    </div>
   </div>
 )

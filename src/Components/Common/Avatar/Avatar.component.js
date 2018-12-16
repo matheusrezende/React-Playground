@@ -26,7 +26,7 @@ class Avatar extends PureComponent {
     return (
       picture ? (
         <div className='avatar'>
-          <img src={picture} />
+          <img src={picture} alt='avatar' />
         </div>
       ) : (
         <div className='avatar'>
